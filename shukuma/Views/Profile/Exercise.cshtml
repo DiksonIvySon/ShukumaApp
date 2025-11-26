@@ -1,0 +1,240 @@
+﻿@model shukuma.domain.Models.UserModel
+@using System.Diagnostics;
+
+@{
+    ViewData["Title"] = "Exercise";
+    ViewData["IsSignedIn"] = "true";
+}
+
+<div class="container-fluid ps-md-0">
+    <form id="exercise" asp-action="Completed">
+        <input type="hidden" asp-for="FirstName" value="@Model.FirstName" id="firstName">
+        <input type="hidden" asp-for="EmailAddress" value="@Model.EmailAddress" id="email">
+
+        <h3 class="login-heading m2-4 site-font">Let's Exercise Together @Model.FirstName</h3>
+        <h6 class="login-heading mb-4">Getting started with the Workout Deck</h6>
+        <div class="row g-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        <div class="card border-primary">
+                            <button id="startBtn" class="btn btn-sm site-primary-bgcolor text-uppercase fw-bold p-2 m-2" type="button" onclick="startExercise(), start(true)">Start</button>
+                            <div class="m-2">
+                                <p>
+                                    <span class="site-font">Time</span>: <span id="stopwatch">00m:00s:00ms</span>
+                                    <br />
+                                    <span class="site-font">Cards Completed</span>: <span id="cardsCompleted">0</span>/52
+                                </p>
+                                <input type="hidden" asp-for="CardsCompleted" value="" id="cardsCompletedV">
+                                <input type="hidden" asp-for="TimeCompleted" value="" id="timeCompletedV">
+                                <div class="progress">
+                                    <div id="progress" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">0%</div>
+                                </div>
+                                <span><i>Tap card to complete</i></span>
+                            </div>
+
+                            <img id="displayCard" class="card-img-bottom" src="../cards/14.jpg" alt="card" onclick="nextCard()">
+
+                            <button id="pauseBtn" class="btn btn-sm site-secondary-bgcolor text-uppercase fw-bold m-2" type="button" onclick="pause()" disabled>Pause</button>
+                            <button id="resumeBtn" class="btn btn-sm site-secondary-bgcolor text-uppercase fw-bold m-2" type="button" onclick="start(true)" disabled>Resume</button>
+                            <button id="finishBtn" class="btn btn-sm site-secondary-bgcolor text-uppercase fw-bold m-2" type="submit" disabled>Finish</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        <div class="card border-primary">
+                            <div class="card-header">
+                                <h5 class="text-center site-font">TUTORIAL</h5>
+                            </div>
+                            <video id="tutorial" autoplay muted controls controlsList="nodownload nofullscreen">
+                                <source src="../tutorials/v1.mp4" id="tutorialSource" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<script>const cards = Array.from({ length: 52 }, (_, index) => index + 1);
+
+    function shuffleArray(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+    }
+
+    function getTutorialNumber(currentCard = 0) {
+        if ([14].includes(currentCard)) {
+            return 'v1';
+        } else if ([41, 42, 43, 44, 45, 46, 47, 48, 49, 50].includes(currentCard)) {
+            return 'v2';
+        } else if ([51, 52, 53].includes(currentCard)) {
+            return 'v3';
+        } else if ([15, 16, 17, 18, 19, 20, 21, 22, 23, 24].includes(currentCard)) {
+            return 'v4';
+        } else if ([25, 26, 27].includes(currentCard)) {
+            return 'v5';
+        } else if ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].includes(currentCard)) {
+            return 'v6';
+        } else if ([13].includes(currentCard)) {
+            return 'v7';
+        } else if ([28, 29, 30, 31, 32, 33, 34, 35, 36, 37].includes(currentCard)) {
+            return 'v9';
+        } else if ([38, 39, 40].includes(currentCard)) {
+            return 'v10';
+        } else {
+            return 'v1';
+        }
+    }
+
+    shuffleArray(cards);
+
+    var startBtn = document.getElementById("startBtn");
+    var pauseBtn = document.getElementById('pauseBtn');
+    var resumeBtn = document.getElementById('resumeBtn');
+    var finishBtn = document.getElementById('finishBtn');
+
+    var stopwatch = document.getElementById("stopwatch");
+    var cardsCompletedV = document.getElementById("cardsCompletedV");
+    var timeCompletedV = document.getElementById("timeCompletedV");
+
+    var timeoutId = null;
+    var ms = 0;
+    var sec = 0;
+    var min = 0;
+
+    const displayCard = document.getElementById("displayCard");
+    const tutorial = document.getElementById("tutorial");
+    const progress = document.getElementById("progress");
+
+    var cardNumber = 0;
+    var completedCards = 0;
+    var hasStartedExercise = false
+    var hasPaused = false
+
+    const startExercise = () => {
+        var tutorialNumber = getTutorialNumber(cards[cardNumber]);
+
+        displayCard.src = "../cards/" + cards[cardNumber] + ".jpg";
+        tutorial.src = "../tutorials/" + tutorialNumber + ".mp4";
+
+        hasStartedExercise = true;
+    }
+
+    const nextCard = () => {
+        if (hasStartedExercise && !hasPaused) {
+            cardNumber++;
+            completedCards++;
+            document.getElementById('cardsCompleted').innerHTML = completedCards;
+            cardsCompletedV.value = completedCards;
+
+            if (cardNumber > 0) {
+                finishBtn.disabled = false;
+            }
+            else {
+                finishBtn.disabled = true;
+            }
+
+            if (cardNumber == 52) {
+                clearTimeout(timeoutId);
+                document.getElementById('finishBtn').click();
+            }
+            else {
+                displayCard.src = "../cards/" + cards[cardNumber] + ".jpg";
+
+                var tutorialNumber = getTutorialNumber(cards[cardNumber]);
+                tutorial.src = "../tutorials/" + tutorialNumber + ".mp4";
+
+                const progressBarClass = 'progress-bar progress-bar-striped progress-bar-animated';
+                const progressValue = Math.round((completedCards / 52) * 100);
+
+                if (progressValue < 25) {
+                    progress.classList = progressBarClass + ' bg-danger';
+                }
+                else if (progressValue < 50) {
+                    progress.classList = progressBarClass + ' bg-warning';
+                }
+                else if (progressValue < 75) {
+                    progress.classList = progressBarClass + ' bg-info';
+                }
+                else {
+                    progress.classList = progressBarClass + ' bg-success';
+                }
+
+                progress.innerHTML = progressValue + '%';
+                progress.ariaValueNow = progressValue + '%';
+                progress.style.width = progressValue + '%';
+            }
+        }
+    }
+
+    /* function: start stopwatch */
+    function start(flag) {
+        if (flag) {
+            startBtn.disabled = true;
+        }
+
+        hasPaused = false;
+        if (tutorial.paused) {
+            tutorial.play();
+        }
+
+        timeoutId = setTimeout(function () {
+            ms = parseInt(ms);
+            sec = parseInt(sec);
+            min = parseInt(min);
+
+            ms++;
+
+            if (ms == 100) {
+                sec = sec + 1;
+                ms = 0;
+            }
+            if (sec == 60) {
+                min = min + 1;
+                sec = 0;
+            }
+            if (ms < 10) {
+                ms = '0' + ms;
+            }
+            if (sec < 10) {
+                sec = '0' + sec;
+            }
+            if (min < 10) {
+                min = '0' + min;
+            }
+
+            const timeElapsed = min + 'm:' + sec + 's:' + ms + 'ms';
+            stopwatch.innerHTML = timeElapsed;
+            timeCompletedV.value = timeElapsed;
+
+            //recursivly call to continue stopwatch
+            start();
+
+        }, 10); //delay time: ms
+
+        pauseBtn.disabled = false;
+        resumeBtn.disabled = true;
+
+        if (cardNumber > 0) {
+            finishBtn.disabled = false;
+        }
+        else {
+            finishBtn.disabled = true;
+        }
+    }
+
+    /* function: pause stopwatch */
+    function pause() {
+        clearTimeout(timeoutId);
+
+        pauseBtn.disabled = true;
+        startBtn.disabled = true;
+        resumeBtn.disabled = false;
+
+        tutorial.pause();
+        hasPaused = true;
+    }</script>

@@ -1,0 +1,81 @@
+﻿@model shukuma.domain.Models.UserModel
+@using System.Diagnostics;
+
+@{
+    ViewData["Title"] = "Completed";
+    ViewData["IsSignedIn"] = "true";
+}
+<form asp-action="Completed">
+    <input type="hidden" asp-for="FirstName" value="@Model.FirstName" id="firstName">
+    <input type="hidden" asp-for="EmailAddress" value="@Model.EmailAddress" id="email">
+    <input type="hidden" asp-for="CardsCompleted" value="@Model.CardsCompleted" id="cardsCompletedV">
+    <input type="hidden" asp-for="TimeCompleted" value="@Model.TimeCompleted" id="timeCompletedV">
+
+    <div class="container-fluid ps-md-0">
+        <div class="row g-0">
+            <div class="d-none d-md-flex col-sm-12 col-md-4 col-lg-6 bg-image"></div>
+            <div class="col-md-8 col-lg-6">
+                <div class="login d-flex align-items-center py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-8 mx-auto">
+                                @if (ViewData["Error"] != null)
+                                {
+                                    <div id="alert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <button id="closeAlert" type="button" class="close btn-sm btn-danger" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <strong>Error</strong>: @ViewData["Error"]
+                                    </div>
+                                }
+                                @if (ViewData["Review"] != null)
+                                {
+                                    <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <button id="closeAlert" type="button" class="close btn-sm btn-success" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        Thanks for your review 🙂 <br/> This empowers us to do better and more! 
+                                    </div>
+                                }
+                                <h2 class="login-heading m2-4 site-font">End of Workout</h2>
+
+                                <div class="card border-success">
+                                    <div class="m-2">
+                                        <div class="progress">
+                                            <div id="progress" class="@ViewData["ProgressClass"]" role="progressbar" aria-valuenow="@ViewData["ProgressValue"]" aria-valuemin="0" aria-valuemax="100" style="width: @ViewData["ProgressValue"]">@ViewData["ProgressValue"]</div>
+                                        </div>
+                                        <h4 class="login-heading m2-4">Well Done @Model.FirstName!</h4>
+                                        <p>
+                                            <b>Cards Completed</b>: <span id="cardsCompleted">@Model.CardsCompleted</span>
+                                            <br />
+                                            <b>Time</b>: <span id="stopwatch">@Model.TimeCompleted</span>
+                                            <br />
+                                            <br />
+                                            <i>Thank you for trying out <span class="site-font">Shukuma</span></i>
+                                        </p>
+                                    </div>
+                                    <a id="link" class="btn btn-sm site-primary-bgcolor text-uppercase fw-bold m-2" href="http://www.y-notofficial.co.za" onclick="pause()">Purchase the Deck</a>
+                                </div>
+                            </div>
+                            @if (ViewData["Review"] is null)
+                            {
+                                <div class="col-md-9 col-lg-8 mx-auto mt-4">
+                                    <div class="card border-success">
+                                        <div class="m-2">
+                                            <h2 class="login-heading mb-2 site-font">Review</h2>
+                                            <h5 class="login-heading m2-4">How was your experience?</h5>
+                                            <div class="mb-3">
+                                                <textarea class="form-control" id="feedBack" asp-for="Review" rows="3"></textarea>
+                                            </div>
+                                            <button id="submitReview" class="btn btn-lg site-primary-bgcolor btn-login text-uppercase fw-bold mb-2" type="submit">Publish</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
