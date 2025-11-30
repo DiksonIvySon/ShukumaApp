@@ -1,8 +1,11 @@
-"use client"
-
 import { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import axios from "axios"
+
+// ✅ Use API_BASE at the top
+const API_BASE = process.env.NODE_ENV === "production"
+  ? "https://shukumaapp-backend.onrender.com" // deployed backend
+  : "http://localhost:5000"; // local dev backend
 
 export default function SignUpPage() {
   const [formData, setFormData] = useState({
@@ -16,7 +19,8 @@ export default function SignUpPage() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/signup", formData)
+      // ✅ Use API_BASE here
+      const response = await axios.post(`${API_BASE}/api/auth/signup`, formData)
       localStorage.setItem("token", response.data.token)
       localStorage.setItem("user", JSON.stringify(response.data.user))
       navigate("/dashboard")
@@ -80,3 +84,4 @@ export default function SignUpPage() {
     </div>
   )
 }
+

@@ -12,8 +12,23 @@ dotenv.config()
 const app = express()
 const PORT = process.env.PORT || 5000
 
-// Middleware
-app.use(cors())
+// CORS configuration
+const allowedOrigins = [
+  "http://localhost:3000", // local frontend
+  "https://shukumaapp-frontend2.onrender.com" // deployed frontend
+]
+
+app.use(cors({
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error("CORS not allowed from this origin"))
+    }
+  },
+  credentials: true
+}))
+
 app.use(express.json())
 
 // Routes
@@ -38,3 +53,4 @@ initializeDatabase()
     console.error("Failed to initialize database:", error)
     process.exit(1)
   })
+
