@@ -1,36 +1,98 @@
 import { Link } from "react-router-dom"
+import "../styles/HomePage.css" // Import the CSS file
+
+import logo from "../assets/white-logo.png";
+import groupImage from "../assets/Group-image.jpg";
+import challenge1 from "../assets/challenge1.png";
+import challenge2 from "../assets/challenge2.png";
+import challenge3 from "../assets/challenge3.png";
 
 export default function HomePage() {
   return (
-    <div className="full-screen">
+    <div className="homepage">
       {/* Header */}
-      <header className="bg-yellow-400 text-black py-4">
+      <header className="header">
         <div className="container header-content">
-          <h1 className="text-2xl font-bold">Shukuma</h1>
-          <nav className="flex gap-6">
-            <Link to="/signin" className="nav-link hover:underline">
-              Sign In
-            </Link>
-            <Link to="/signup" className="btn btn-primary bg-black text-white px-4 py-2 rounded">
-              Sign Up
-            </Link>
+          <img src={logo} alt="Shukuma logo" width={150}/>
+          <nav className="nav">
+            <Link to="/signin" className="nav-link">Sign In</Link>
+            <Link to="/signup" className="btn btn-primary">Sign Up</Link>
           </nav>
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="bg-gray-50 py-20 hero">
-        <div className="container">
-          <h2 className="text-4xl font-bold mb-4 hero-title">Body-Weight Fitness, Reimagined</h2>
-          <p className="text-xl text-gray-600 mb-8 hero-subtitle">52-Card Deck System. Zero Equipment Needed.</p>
-          <Link
-            to="/signup"
-            className="bg-yellow-400 text-black px-8 py-3 rounded font-bold text-lg btn btn-primary btn-lg"
-          >
-            Get Started Free
-          </Link>
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="container hero-grid">
+          <div className="hero-text">
+            <h2>Let's Exercise Together</h2>
+            <p>
+              Get randomized workout challenges, track your progress, and achieve your fitness goals with zero equipment needed.
+            </p>
+            <Link to="/signup" className="btn btn-hero">Get Started Free</Link>
+          </div>
+          <div className="hero-image">
+            <img
+              src={groupImage}
+              alt="Fitness workout"
+            />
+          </div>
         </div>
       </section>
+
+      {/* Features */}
+      <section className="features">
+        <div className="container features-grid">
+          <div className="feature-card">
+            <img className="feature-image" src={challenge1} alt="image" />
+            <h3>Randomized Workouts</h3>
+            <p>Shuffle the deck and get a surprise workout every day to stay engaged and motivated.</p>
+          </div>
+          <div className="feature-card">
+            <img className="feature-image" src={challenge2} alt="image" />
+            <h3>Progress Tracking</h3>
+            <p>Log your workouts, track streaks, monitor improvements, and reach new personal records.</p>
+          </div>
+          <div className="feature-card">
+            <img className="feature-image" src={challenge3} alt="image" />
+            <h3>Daily Challenges</h3>
+            <p>Complete daily and weekly challenges to earn achievements and maintain consistency.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* More Features */}
+      <section className="more-features">
+        <div className="container more-features-grid">
+          <div className="feature-card">
+            <h3>Customizable Workouts</h3>
+            <p>Filter by fitness level, duration, or goal type. Tailor your workout to your needs.</p>
+            <ol>
+              <li>Fitness level selection</li>
+              <li>Workout duration options</li>
+              <li>Goal-based filtering</li>
+            </ol>
+          </div>
+          <div className="feature-card">
+            <h3>Clear Instructions</h3>
+            <p>Step-by-step guides with visual demonstrations for safe, correct form.</p>
+            <ol>
+              <li>Video tutorials</li>
+              <li>Exercise illustrations</li>
+              <li>Safety tips</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="container footer-content">
+          <p>© 2025 Shukuma. All rights reserved. Zero equipment needed.</p>
+        </div>
+      </footer>
     </div>
   )
 }
+
+

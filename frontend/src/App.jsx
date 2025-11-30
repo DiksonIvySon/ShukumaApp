@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <div className="app">
-      {isAuthenticated && <Navigation />}
+      {/* {isAuthenticated && <Navigation />} */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/signup" element={<SignUpPage />} />
