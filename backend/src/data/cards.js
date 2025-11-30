@@ -34,7 +34,7 @@ export const CARDS_DATA = [
     duration: "40 seconds",
     difficulty: "beginner",
     category: "Core",
-    imageUrl: "/images/placeholder.jpg",
+    imageUrl: "/images/placeholdr.jpg",
     videoUrl: "https://placeholder-video-url.mp4",
     sets: 3,
     reps: "20-30 (alternating)"
