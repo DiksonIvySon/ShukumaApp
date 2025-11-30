@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import ProgressTracker from "../components/ProgressTracker"
+import NavigationBar from "../components/Navigation"
 import ChallengesWidget from "../components/ChallengesWidget"
 import { progressAPI, challengeAPI } from "../lib/api"
 
@@ -33,6 +34,7 @@ export default function Dashboard() {
 
   return (
     <div className="page-wrapper">
+      <NavigationBar/>
       <div className="container">
         <h1 className="text-3xl text-bold mb-8">Welcome back, {user.firstName}!</h1>
 

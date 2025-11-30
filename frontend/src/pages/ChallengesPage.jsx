@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // or next/navigation if using Next.js
-import Navigation from "../components/Navigation"; // adjust path
+import { useNavigate } from "react-router-dom"; 
+import Navigation from "../components/Navigation";
 import "../styles/ChallengesPage.css";
 
 const CHALLENGES = [
@@ -55,7 +55,7 @@ export default function ChallengesPage() {
 
   return (
     <div className="challenges-page">
-      {/* <Navigation /> */}
+      <Navigation /> 
 
       <main className="challenges-main">
         <h1>Challenges & Goals</h1>

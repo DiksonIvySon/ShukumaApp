@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import FlipCard from "../components/FlipCard"
 import VideoPlayer from "../components/VideoPlayer"
 import WorkoutTimer from "../components/WorkoutTimer"
+import NavigationBar from "../components/Navigation"
 import { workoutAPI } from "../lib/api"
 
 export default function WorkoutDeck() {
@@ -63,6 +64,8 @@ export default function WorkoutDeck() {
 
   return (
     <div className="page-wrapper">
+      <NavigationBar/>
+
       <div className="container">
         <h1 className="text-3xl text-bold mb-8">Randomized Workout Deck</h1>
 

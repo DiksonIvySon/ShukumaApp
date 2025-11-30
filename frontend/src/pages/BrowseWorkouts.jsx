@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import WorkoutCard from "../components/WorkoutCard"
+import NavigationBar from "../components/Navigation"
 import { workoutAPI } from "../lib/api"
 
 export default function BrowseWorkouts() {
@@ -45,6 +46,8 @@ export default function BrowseWorkouts() {
 
   return (
     <div className="page-wrapper">
+      <NavigationBar/>
+
       <div className="container">
         <h1 className="text-3xl text-bold mb-8">Browse Exercises</h1>
 

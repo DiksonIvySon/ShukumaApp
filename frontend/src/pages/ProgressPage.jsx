@@ -1,7 +1,7 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { progressAPI } from "../lib/api"
+
+import NavigationBar from "../components/Navigation"
 
 export default function ProgressPage() {
   const [stats, setStats] = useState(null)
@@ -29,6 +29,7 @@ export default function ProgressPage() {
 
   return (
     <div className="page-wrapper">
+      <NavigationBar/>
       <div className="container">
         <h1 className="text-3xl text-bold mb-8">Progress Tracker</h1>
 
