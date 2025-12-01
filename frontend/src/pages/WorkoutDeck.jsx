@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import FlipCard from "../components/FlipCard"
 import VideoPlayer from "../components/VideoPlayer"

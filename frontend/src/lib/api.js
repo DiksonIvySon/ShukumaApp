@@ -1,48 +1,50 @@
-import axios from "axios"
+import axios from "axios";
 
-const API_BASE_URL =
-  typeof process !== "undefined" && process.env?.REACT_APP_API_URL
-    ? process.env.REACT_APP_API_URL
-    : "http://localhost:5000/api"
+// ✅ Choose base URL depending on environment
+const API_BASE = process.env.NODE_ENV === "production"
+  ? "https://shukumaapp-backend.onrender.com" // deployed backend URL
+  : "http://localhost:5000"; // local dev backend
 
 const api = axios.create({
-  baseURL: API_BASE_URL,
-})
+  baseURL: API_BASE, // don't append /api here; keep it in the axios calls
+});
 
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token")
+  const token = localStorage.getItem("token");
   if (token) {
-    config.headers.Authorization = `Bearer ${token}`
+    config.headers.Authorization = `Bearer ${token}`;
   }
-  return config
-})
+  return config;
+});
 
+// --- your APIs remain the same ---
 export const authAPI = {
-  signup: (data) => api.post("/auth/signup", data),
-  signin: (data) => api.post("/auth/signin", data),
-}
+  signup: (data) => api.post("/api/auth/signup", data),
+  signin: (data) => api.post("/api/auth/signin", data),
+};
 
 export const workoutAPI = {
-  getAllCards: () => api.get("/workouts/cards"),
-  getCardById: (id) => api.get(`/workouts/cards/${id}`),
-  getRandomCard: () => api.get("/workouts/random"),
-  completeWorkout: (data) => api.post("/workouts/complete", data),
-  getHistory: () => api.get("/workouts/history"),
-  addFavorite: (cardId) => api.post(`/workouts/favorite/${cardId}`),
-  getFavorites: () => api.get("/workouts/favorites"),
-}
+  getAllCards: () => api.get("/api/workouts/cards"),
+  getCardById: (id) => api.get(`/api/workouts/cards/${id}`),
+  getRandomCard: () => api.get("/api/workouts/random"),
+  completeWorkout: (data) => api.post("/api/workouts/complete", data),
+  getHistory: () => api.get("/api/workouts/history"),
+  addFavorite: (cardId) => api.post(`/api/workouts/favorite/${cardId}`),
+  getFavorites: () => api.get("/api/workouts/favorites"),
+};
 
 export const progressAPI = {
-  getStats: () => api.get("/progress/stats"),
-  getHistory: () => api.get("/progress/history"),
-  getWeekly: () => api.get("/progress/weekly"),
-  updateFitnessLevel: (level) => api.put("/progress/fitness-level", { fitnessLevel: level }),
-}
+  getStats: () => api.get("/api/progress/stats"),
+  getHistory: () => api.get("/api/progress/history"),
+  getWeekly: () => api.get("/api/progress/weekly"),
+  updateFitnessLevel: (level) => api.put("/api/progress/fitness-level", { fitnessLevel: level }),
+};
 
 export const challengeAPI = {
-  getActive: () => api.get("/challenges"),
-  create: (data) => api.post("/challenges/create", data),
-  updateProgress: (challengeId, currentCount) => api.put(`/challenges/${challengeId}/progress`, { currentCount }),
-  getAchievements: () => api.get("/challenges/achievements"),
-}
+  getActive: () => api.get("/api/challenges"),
+  create: (data) => api.post("/api/challenges/create", data),
+  updateProgress: (challengeId, currentCount) => api.put(`/api/challenges/${challengeId}/progress`, { currentCount }),
+  getAchievements: () => api.get("/api/challenges/achievements"),
+};
+
 

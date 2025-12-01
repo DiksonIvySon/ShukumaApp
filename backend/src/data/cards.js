@@ -15,7 +15,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Core",
     imageUrl: "card1",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "12-20"
   },
@@ -35,7 +35,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Core",
     imageUrl: "card12",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "20-30 (alternating)"
   },
@@ -55,7 +55,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Core",
     imageUrl: "card52",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "20-30 (alternating)"
   },
@@ -75,7 +75,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Core",
     imageUrl: "card12",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "10-15"
   },
@@ -95,7 +95,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Core",
     imageUrl: "card14",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "60s hold"
   },
@@ -115,7 +115,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Cardio/Core",
     imageUrl: "card2",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 4,
     reps: "30-50 (alternating)"
   },
@@ -135,7 +135,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Core",
     imageUrl: "card12",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "20-30 (alternating)"
   },
@@ -155,7 +155,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Core",
     imageUrl: "card3",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "30-40 (alternating)"
   },
@@ -175,7 +175,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Core",
     imageUrl: "card12",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "12-20"
   },
@@ -195,7 +195,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Core",
     imageUrl: "card2",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 2,
     reps: "40s hold"
   },
@@ -215,7 +215,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Core/Shoulders",
     imageUrl: "card2",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "20-30 (alternating)"
   },
@@ -235,7 +235,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Core",
     imageUrl: "card1",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "12-16 (alternating)"
   },
@@ -255,7 +255,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Core/Power",
     imageUrl: "card15",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "12-16"
   },
@@ -275,7 +275,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Upper Body",
     imageUrl: "card41",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 4,
     reps: "8-15"
   },
@@ -295,7 +295,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Upper Body",
     imageUrl: "card51",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "10-20"
   },
@@ -315,7 +315,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Upper Body/Triceps",
     imageUrl: "card42",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "8-12"
   },
@@ -335,7 +335,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Upper Body/Triceps",
     imageUrl: "card16",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "10-15"
   },
@@ -355,7 +355,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Upper Body/Shoulders",
     imageUrl: "card44",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "8-12"
   },
@@ -375,7 +375,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Upper Body/Back",
     imageUrl: "card18",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "12-15"
   },
@@ -395,7 +395,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Upper Body/Back",
     imageUrl: "card17",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "10-12 each"
   },
@@ -415,7 +415,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Upper Body/Arms",
     imageUrl: "card114",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "12-15"
   },
@@ -435,7 +435,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Upper Body/Chest",
     imageUrl: "card50",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "10-12"
   },
@@ -455,7 +455,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Upper Body/Back & Core",
     imageUrl: "card150",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "8-12 each"
   },
@@ -475,7 +475,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Upper Body",
     imageUrl: "card49",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "8-12"
   },
@@ -495,7 +495,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Upper Body",
     imageUrl: "card40",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "10-15"
   },
@@ -515,7 +515,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Upper Body",
     imageUrl: "card47",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "8-12"
   },
@@ -535,7 +535,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Lower Body",
     imageUrl: "card17",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 4,
     reps: "12-20"
   },
@@ -555,7 +555,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Lower Body",
     imageUrl: "card27",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "10-12 each"
   },
@@ -575,7 +575,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Lower Body",
     imageUrl: "card27",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "12-16 total (each leg)"
   },
@@ -595,7 +595,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Lower Body",
     imageUrl: "card27",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 4,
     reps: "12-20"
   },
@@ -615,7 +615,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Lower Body",
     imageUrl: "card27",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "8-12 each"
   },
@@ -635,7 +635,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Lower Body",
     imageUrl: "card20",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "12-15"
   },
@@ -655,7 +655,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Lower Body/Calves",
     imageUrl: "card25",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "15-25"
   },
@@ -675,7 +675,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Lower Body",
     imageUrl: "card16",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "8-12 each"
   },
@@ -695,7 +695,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Lower Body",
     imageUrl: "card25",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "10-12 each"
   },
@@ -715,7 +715,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Lower Body/Hamstrings",
     imageUrl: "card25",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "10-15"
   },
@@ -735,7 +735,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Lower Body/Plyometrics",
     imageUrl: "card119",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 4,
     reps: "8-15"
   },
@@ -755,7 +755,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Lower Body/Glutes",
     imageUrl: "card13",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "12-15 each"
   },
@@ -775,7 +775,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Lower Body/Strength",
     imageUrl: "card20",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "6-10 each"
   },
@@ -795,7 +795,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Full Body/HIIT",
     imageUrl: "card33",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 4,
     reps: "10-20"
   },
@@ -815,7 +815,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Cardio",
     imageUrl: "card38",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 2,
     reps: "60s"
   },
@@ -835,7 +835,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Cardio/Conditioning",
     imageUrl: "card5",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "45s"
   },
@@ -855,7 +855,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Plyometrics/Agility",
     imageUrl: "card40",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "20-30 (alternating)"
   },
@@ -875,7 +875,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Plyometrics/Power",
     imageUrl: "card20",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "6-12"
   },
@@ -895,7 +895,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Cardio/Core",
     imageUrl: "card31",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 4,
     reps: "50-80 (alternating)"
   },
@@ -915,7 +915,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Cardio/Power",
     imageUrl: "card40",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "30-50 skips"
   },
@@ -935,7 +935,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Full Body/Conditioning",
     imageUrl: "card1",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "40s"
   },
@@ -955,7 +955,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Plyometrics",
     imageUrl: "card1",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "8-15"
   },
@@ -975,7 +975,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Cardio/HIIT",
     imageUrl: "card25",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 6,
     reps: "intervals"
   },
@@ -995,7 +995,7 @@ export const CARDS_DATA = [
     difficulty: "advanced",
     category: "Power/Conditioning",
     imageUrl: "card25",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 4,
     reps: "30s"
   },
@@ -1015,7 +1015,7 @@ export const CARDS_DATA = [
     difficulty: "intermediate",
     category: "Agility/Conditioning",
     imageUrl: "card25",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 3,
     reps: "patterns"
   },
@@ -1035,7 +1035,7 @@ export const CARDS_DATA = [
     difficulty: "beginner",
     category: "Mobility/Recovery",
     imageUrl: "card25",
-    videoUrl: "https://placeholder-video-url.mp4",
+    videoUrl: "https://drive.google.com/file/d/1W5kgQdKAa-Z5LsutfytUBlppXb01z4dt/view?usp=drive_link",
     sets: 1,
     reps: "5 minutes"
   }
