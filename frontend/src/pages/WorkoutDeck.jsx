@@ -5,12 +5,36 @@ import WorkoutTimer from "../components/WorkoutTimer"
 import NavigationBar from "../components/Navigation"
 import { workoutAPI } from "../lib/api"
 
+import tutorial1 from "../assets/tutorials/v1.mp4"
+import tutorial2 from "../assets/tutorials/v2.mp4"
+import tutorial3 from "../assets/tutorials/v3.mp4"
+import tutorial4 from "../assets/tutorials/v4.mp4"
+import tutorial5 from "../assets/tutorials/v5.mp4"
+import tutorial6 from "../assets/tutorials/v6.mp4"
+import tutorial7 from "../assets/tutorials/v7.mp4"
+import tutorial8 from "../assets/tutorials/v8.mp4"
+import tutorial9 from "../assets/tutorials/v9.mp4"
+import tutorial10 from "../assets/tutorials/v10.mp4"
+
+const videoMap = {
+  "Tutorial 1": tutorial1,
+  "Tutorial 2": tutorial2,
+  "Tutorial 3": tutorial3,
+  "Tutorial 4": tutorial4,
+  "Tutorial 5": tutorial5,
+  "Tutorial 6": tutorial6,
+  "Tutorial 7": tutorial7,
+  "Tutorial 8": tutorial8,
+  "Tutorial 9": tutorial9,
+  "Tutorial 10": tutorial10,
+}
+
+
 export default function WorkoutDeck() {
   const [currentCard, setCurrentCard] = useState(null)
   const [deck, setDeck] = useState([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [loading, setLoading] = useState(true)
-  const [isWorkoutStarted, setIsWorkoutStarted] = useState(false)
 
   useEffect(() => {
     loadDeck()
@@ -20,8 +44,14 @@ export default function WorkoutDeck() {
     try {
       const response = await workoutAPI.getAllCards()
       const shuffled = response.data.cards.sort(() => Math.random() - 0.5)
-      setDeck(shuffled)
-      setCurrentCard(shuffled[0])
+
+      const cardsWithVideos = shuffled.map(card => ({
+        ...card,
+        videoUrl: videoMap[card.videoUrl] || null, 
+      }))
+
+      setDeck(cardsWithVideos)
+      setCurrentCard(cardsWithVideos[0])
       setCurrentIndex(0)
     } catch (error) {
       console.error("Failed to load cards:", error)
@@ -74,7 +104,6 @@ export default function WorkoutDeck() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             <VideoPlayer videoUrl={currentCard?.videoUrl} title={currentCard?.name} />
-
             <WorkoutTimer initialSeconds={Number.parseInt(currentCard?.duration) || 30} />
 
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>

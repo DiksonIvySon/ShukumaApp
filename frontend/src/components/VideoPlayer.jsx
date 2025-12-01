@@ -19,9 +19,10 @@ export default function VideoPlayer({ videoUrl, title }) {
 
   return (
     <div className="video-container">
-      <h3 className="video-title">Tutorial</h3>
+      <h3 className="video-title">{title}</h3>
       <div className="video-player">
-        <video controls>
+        {/* Add key so React reloads video when videoUrl changes */}
+        <video key={videoUrl} controls>
           <source src={videoUrl} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
