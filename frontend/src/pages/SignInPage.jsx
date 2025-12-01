@@ -1,6 +1,9 @@
+
 import { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import axios from "axios"
+
+import loginImage from "../assets/login-image.png";
 
 // ✅ Put this at the top of your file
 const API_BASE = process.env.NODE_ENV === "production"
@@ -29,6 +32,10 @@ export default function SignInPage() {
 
   return (
     <div className="auth-container">
+      {/* Left Image */}
+      <div className="auth-image">
+        <img src={loginImage} alt="login image" />
+      </div>
       <div className="auth-box">
         <h2 className="auth-title">Welcome back to Shukuma</h2>
         <form onSubmit={handleSubmit} className="form">

@@ -12,11 +12,11 @@ export default function HomePage() {
     <div className="homepage">
       {/* Header */}
       <header className="header">
-        <div className="container header-content">
+        <div className="container">
           <img src={logo} alt="Shukuma logo" width={150}/>
           <nav className="nav">
-            <Link to="/signin" className="nav-link">Sign In</Link>
-            <Link to="/signup" className="btn btn-primary">Sign Up</Link>
+            <Link to="/signin" className="nav-link btn-primary">Sign In</Link>
+            <Link to="/signup" className="btn-primary">Sign Up</Link>
           </nav>
         </div>
       </header>

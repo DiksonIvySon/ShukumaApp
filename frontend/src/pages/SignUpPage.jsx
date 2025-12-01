@@ -2,6 +2,8 @@ import { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import axios from "axios"
 
+import signupImage from "../assets/symbol-logo.png";
+
 // ✅ Use API_BASE at the top
 const API_BASE = process.env.NODE_ENV === "production"
   ? "https://shukumaapp-backend.onrender.com" // deployed backend
@@ -80,6 +82,9 @@ export default function SignUpPage() {
             Sign in
           </Link>
         </p>
+      </div>
+      <div className="auth-image">
+        <img src={signupImage} alt="login image" />
       </div>
     </div>
   )
